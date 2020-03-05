@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::match(['get','post'],'/admin',['as'=>'admin','uses'=>'AdminController@showadmin']);
+Route::match(['get','post'],'/ages',['as'=>'ages','uses'=>'AdminController@ages']);
+//Route::get('/showInstal',['as'=>'showInstal','uses'=>'ShowInstallController@showInstal']);
